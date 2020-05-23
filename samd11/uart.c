@@ -40,8 +40,8 @@
 /*- Definitions -------------------------------------------------------------*/
 #define UART_BUF_SIZE            256
 
-HAL_GPIO_PIN(UART_TX,            A, 4);
-HAL_GPIO_PIN(UART_RX,            A, 5);
+HAL_GPIO_PIN(UART_TX,            A, 8);
+HAL_GPIO_PIN(UART_RX,            A, 9);
 
 #define UART_SERCOM              SERCOM0
 #define UART_SERCOM_PMUX         PORT_PMUX_PMUXE_D_Val
@@ -49,8 +49,8 @@ HAL_GPIO_PIN(UART_RX,            A, 5);
 #define UART_SERCOM_APBCMASK     PM_APBCMASK_SERCOM0
 #define UART_SERCOM_IRQ_INDEX    SERCOM0_IRQn
 #define UART_SERCOM_IRQ_HANDLER  irq_handler_sercom0
-#define UART_SERCOM_TXPO         0
-#define UART_SERCOM_RXPO         1
+#define UART_SERCOM_TXPO         1
+#define UART_SERCOM_RXPO         3
 
 /*- Types ------------------------------------------------------------------*/
 typedef struct
